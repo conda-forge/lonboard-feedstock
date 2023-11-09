@@ -33,6 +33,7 @@ test:
     - lonboard
   commands:
     - pip check
+    - bash build.sh
   requires:
     - pip
 
