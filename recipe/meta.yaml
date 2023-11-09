@@ -18,11 +18,12 @@ build:
   number: 1
 
 requirements:
+  build:
+    - nodejs
   host:
     - python >=3.8,<4.0
     - poetry-core
     - pip
-    - nodejs
   run:
     - python >=3.8.0,<4.0.0
     - anywidget >=0.6.3,<0.7.0
