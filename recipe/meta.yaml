@@ -15,14 +15,14 @@ build:
     - npm install
     - npm run build
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-    - {{ PYTHON }} -m pip install -U build
+    # - {{ PYTHON }} -m pip install -U build
     - {{ PYTHON }} -m build
   number: 1
 
 requirements:
   build:
     - nodejs >=18.0.0,<19.0.0
-    - build >=0.7.0,<0.8.0
+    - python-build >=0.7.0,<0.8.0
   host:
     - python >=3.8,<4.0
     - poetry-core
