@@ -15,7 +15,7 @@ build:
     - npm install
     - npm run build
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-    # - {{ PYTHON }} -m pip install -U build
+    - {{ PYTHON }} -m pip install -U build
     - {{ PYTHON }} -m build
   number: 1
 
