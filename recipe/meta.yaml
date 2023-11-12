@@ -15,8 +15,10 @@ build:
     - npm install
     - npm run build
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-    - {{ PYTHON }} -m pip install -U build
-    - {{ PYTHON }} -m build
+    - {{ PYTHON }} -m pip install setuptools wheel
+    - {{ PYTHON }} setup.py bdist_wheel
+    # - {{ PYTHON }} -m pip install -U build
+    # - {{ PYTHON }} -m build
   number: 1
 
 requirements:
