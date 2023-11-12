@@ -21,7 +21,7 @@ build:
 
 requirements:
   build:
-    - nodejs
+    - nodejs >=18.0.0,<19.0.0
   host:
     - python >=3.8,<4.0
     - poetry-core
