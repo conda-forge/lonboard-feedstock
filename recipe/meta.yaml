@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/developmentseed/lonboard/archive/refs/tags/v{{ version }}.zip
-  sha256: 94abdeb81bf1bd60c0d82df09056751667a1075bd75b0d914d1d459be152d370
+  sha256: 2f952777f5d263383220949854be3dfd8201fd731e36fdc23d04fae3abc7a8a9
 
 build:
   noarch: python
