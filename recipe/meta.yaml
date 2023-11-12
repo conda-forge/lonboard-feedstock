@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lonboard-{{ version }}.tar.gz
+  url: https://github.com/developmentseed/lonboard/archive/refs/tags/v{{ version }}.zip
   sha256: 94abdeb81bf1bd60c0d82df09056751667a1075bd75b0d914d1d459be152d370
 
 build:
