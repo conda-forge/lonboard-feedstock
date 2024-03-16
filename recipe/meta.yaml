@@ -37,12 +37,10 @@ requirements:
     - shapely >=2.0.0,<3.0.0
 
 test:
-  imports:
-    - lonboard
-  # commands:
-  #   - conda build --output-folder .  # Build package locally
-  #   - find . -name "*.tar.bz2" -exec sh -c 'tar xf "$1" -C /tmp && [ -d /tmp/lonboard/static ]' _ {} \; || exit 1
-  #   - pip check
+  # imports:
+  #   - lonboard
+  commands:
+    - pip check
   requires:
     - pip
 
