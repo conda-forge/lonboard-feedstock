@@ -11,10 +11,15 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: 
+    -  {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    - npm install
+    - npm run build 
   number: 0
 
 requirements:
+  build:
+    - nodejs
   host:
     - python >=3.8,<4.0
     - poetry-core
