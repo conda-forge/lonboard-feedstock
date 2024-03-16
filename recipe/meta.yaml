@@ -6,8 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lonboard-{{ version }}.tar.gz
-  sha256: 1cfb38c52b26c4f61be7565b76fb0500e44c118651be06748189234a6ec0422f
+  url: https://github.com/developmentseed/lonboard/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 399c5d42851a35c6d31df5c0846a4b47af214d1fa8b83871d26d4a4d8e42e58e
+  # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lonboard-{{ version }}.tar.gz
+  # sha256: 1cfb38c52b26c4f61be7565b76fb0500e44c118651be06748189234a6ec0422f
 
 build:
   noarch: python
