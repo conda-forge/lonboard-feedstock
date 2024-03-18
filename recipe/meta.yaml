@@ -37,11 +37,6 @@ test:
   requires:
     - pip
 
-outputs:
-  - name: lonboard
-    files:
-      - lonboard
-
 about:
   home: https://github.com/developmentseed/lonboard
   summary: Python library for fast, interactive geospatial vector data visualization in Jupyter.
