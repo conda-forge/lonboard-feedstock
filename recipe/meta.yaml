@@ -40,7 +40,7 @@ test:
 outputs:
   - name: lonboard
     files:
-      - "*"
+      - lonboard
 
 about:
   home: https://github.com/developmentseed/lonboard
