@@ -38,8 +38,8 @@ requirements:
     - {{ name }}/static
 
 test:
-  # imports:
-  #   - lonboard
+  imports:
+    - lonboard
   commands:
     - pip check
   requires:
