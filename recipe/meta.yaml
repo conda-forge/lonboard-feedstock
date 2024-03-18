@@ -6,22 +6,15 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/developmentseed/lonboard/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 399c5d42851a35c6d31df5c0846a4b47af214d1fa8b83871d26d4a4d8e42e58e
-  # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lonboard-{{ version }}.tar.gz
-  # sha256: 1cfb38c52b26c4f61be7565b76fb0500e44c118651be06748189234a6ec0422f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lonboard-{{ version }}.tar.gz
+  sha256: 1cfb38c52b26c4f61be7565b76fb0500e44c118651be06748189234a6ec0422f
 
 build:
   noarch: python
-  script: 
-    -  {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-    - npm install
-    - npm run build 
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
-  build:
-    - nodejs
   host:
     - python >=3.8,<4.0
     - poetry-core
@@ -37,12 +30,17 @@ requirements:
     - shapely >=2.0.0,<3.0.0
 
 test:
-  # imports:
-  #   - lonboard
+  imports:
+    - lonboard
   commands:
     - pip check
   requires:
     - pip
+
+outputs:
+  - name: lonboard
+    files:
+      - "*"
 
 about:
   home: https://github.com/developmentseed/lonboard
@@ -53,3 +51,4 @@ about:
 extra:
   recipe-maintainers:
     - giswqs
+    - kylebarron
