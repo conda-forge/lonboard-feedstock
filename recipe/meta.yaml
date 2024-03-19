@@ -13,8 +13,6 @@ build:
   noarch: python
   script: 
     -  {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-    - mkdir -p $PREFIX/static
-    - cp -r static/* $PREFIX/static 
 
   number: 0
 
