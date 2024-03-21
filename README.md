@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@giswqs](https://github.com/giswqs/)
+* [@kylebarron](https://github.com/kylebarron/)
 
