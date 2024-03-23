@@ -1,5 +1,5 @@
 {% set name = "lonboard" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lonboard-{{ version }}.tar.gz
-  sha256: 432f8d1106bdc959dabb3a8d9163a225f8b0d73e9de4287ae315e0cde17f3504
+  sha256: d9cd2f42ee34a3bc4c8bf828c0a0b4d15811bf1102a63c0316bd8c7063d1fe75
 
 build:
   noarch: python
