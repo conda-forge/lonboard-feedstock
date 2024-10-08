@@ -33,6 +33,9 @@ requirements:
     - numpy >=1.14
     - pyproj >=3.3
     - traitlets >=5.10
+    # TODO: remove in 0.10.1
+    - pandas
+    - pyarrow
 
 test:
   imports:
