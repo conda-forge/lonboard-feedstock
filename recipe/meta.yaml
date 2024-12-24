@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lonboard-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/lonboard-{{ version }}.tar.gz
   sha256: 0e0202279a83f05ba5dfffd6193e09d9f40b20dda3c89b3098de06b620abc1eb
 
 build:
@@ -14,17 +14,17 @@ build:
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
-  number: 0
+  number: 1
 
 requirements:
   build:
     - nodejs
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.8.0,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - anywidget >=0.9.0
     - arro3-compute >=0.4.1
     - arro3-core >=0.4.1
@@ -41,6 +41,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/developmentseed/lonboard
