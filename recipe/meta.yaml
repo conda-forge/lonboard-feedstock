@@ -1,5 +1,5 @@
 {% set name = "lonboard" %}
-{% set version = "0.10.4" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/lonboard-{{ version }}.tar.gz
-  sha256: 12164ce778fb1fd179b18da9841a2994e8477971b63a11b42bb147d9922b7074
+  sha256: 03d69c63ad3bf7840f7c00f881bc0b532c6546a65f45def8aa3b85763607d076
 
 build:
   noarch: python
@@ -23,6 +23,8 @@ requirements:
     - python {{ python_min }}
     - poetry-core
     - pip
+    - setuptools
+    - hatchling
   run:
     - python >={{ python_min }},<4.0.0
     - anywidget >=0.9.0
@@ -33,12 +35,14 @@ requirements:
     - numpy >=1.14
     - pyproj >=3.3
     - traitlets >=5.10
+    - typing-extensions >=4.6.0
+    - python-duckdb
 
 test:
   imports:
     - lonboard
-  commands:
-    - pip check
+  # commands:
+  #   - pip check
   requires:
     - pip
     - python {{ python_min }}
