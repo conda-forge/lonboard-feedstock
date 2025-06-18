@@ -1,5 +1,5 @@
 {% set name = "lonboard" %}
-{% set version = "0.11.0" %}
+{% set version = "0.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/lonboard-{{ version }}.tar.gz
-  sha256: 03d69c63ad3bf7840f7c00f881bc0b532c6546a65f45def8aa3b85763607d076
+  sha256: e298b18797b870f0b000df5978f152dad21a6bf459e50fcb509da71c316d1e3c
 
 build:
   noarch: python
@@ -36,7 +36,6 @@ requirements:
     - pyproj >=3.3
     - traitlets >=5.10
     - typing-extensions >=4.6.0
-    - python-duckdb
 
 test:
   imports:
