@@ -35,6 +35,7 @@ requirements:
     - numpy >=1.14
     - pyproj >=3.3
     - traitlets >=5.10
+    - typing-extensions >=4.6.0
     - python-duckdb
 
 test:
