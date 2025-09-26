@@ -1,5 +1,5 @@
 {% set name = "lonboard" %}
-{% set version = "0.11.1" %}
+{% set version = "0.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/lonboard-{{ version }}.tar.gz
-  sha256: e298b18797b870f0b000df5978f152dad21a6bf459e50fcb509da71c316d1e3c
+  sha256: 2a4c07b38c0da6cd348df8133c3694815540f00fbf192104c6a4cecb3a6a5ea1
 
 build:
   noarch: python
@@ -31,6 +31,7 @@ requirements:
     - arro3-compute >=0.4.1
     - arro3-core >=0.4.1
     - arro3-io >=0.4.1
+    - geoarrow-rust-core >=0.5.2
     - ipywidgets >=7.6.0
     - numpy >=1.14
     - pyproj >=3.3
