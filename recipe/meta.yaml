@@ -31,6 +31,7 @@ requirements:
     - arro3-compute >=0.4.1
     - arro3-core >=0.4.1
     - arro3-io >=0.4.1
+    - geoarrow-rust-core >=0.5.2
     - ipywidgets >=7.6.0
     - numpy >=1.14
     - pyproj >=3.3
